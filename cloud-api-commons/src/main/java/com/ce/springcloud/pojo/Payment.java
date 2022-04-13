@@ -1,7 +1,9 @@
 package com.ce.springcloud.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
@@ -13,6 +15,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = false)
+@TableName("payment")
 public class Payment implements Serializable {
     private Long id;
     // 微服务 一个服务对应一个数据库，同一个信息可能存在不同的数据库
